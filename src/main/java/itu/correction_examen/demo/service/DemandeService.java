@@ -26,7 +26,6 @@ public class DemandeService {
     @Autowired
     private StatutRepository statutRepo;
 
-    // RÉCUPÉRER TOUT
     public List<Demande> findAll() {
         return demande.findAll();
     }
@@ -35,10 +34,6 @@ public class DemandeService {
         return demande.findById(id).orElse(null);
     }
 
-    /**
-     * Transaction = TOUT ou RIEN
-     * Si DemandeStatut échoue → Demande aussi annulée
-     */
     @Transactional
     public Demande save(Demande obj) {
 
