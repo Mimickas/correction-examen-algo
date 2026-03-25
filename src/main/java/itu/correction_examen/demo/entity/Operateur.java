@@ -9,7 +9,7 @@ public class Operateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "operateur", nullable = false, length = 1)
+    @Column(name = "operateur", nullable = false, length = 10)
     private String operateur;
 
     // Constructeurs
